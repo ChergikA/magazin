@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Data DateTime="20150827111837" User="Sales" Magazin="km" KodMAgazin="1">
+
+   
+<!-- читаем классом cls_set элементы должны находиться в своих "каталогах"
+    принцип : ключ - значение   	centr@kancler.com;/tmp/31166989.txt -->
+
+    <docPriemka info="Наcтройки для документа приемки и приемки данных" >
+        <docPriemkaFile 
+            info="doc_priemka.php или doc_priemka2.php какой именно файл используем 
+                    файл подставляется в БД в файле leftMenu.php "  
+        >doc_priemka.php</docPriemkaFile>
+        <docPriemkaMail info="если = 1 то новые поступления заходят мылом"  
+        >0</docPriemkaMail>       
+        
+        <ZolotePero info="если = 1 то это магазин Золотое перо показываем розницу канцлера"   
+        >0</ZolotePero>   
+        
+    </docPriemka>
+    
+    <docChek info="Наcтройки для документа чек" >
+        <f_oplata info="форма оплаты по умолчанию, если -1 - выбирать, если 0 то касса_нал, 1- терминал
+                ">0</f_oplata>
+        <tip_prn>Laser</tip_prn> <!-- Laser или UNS-tp51 Печать чека -->       
+    
+</docChek>
+    <priceList info="Наcтройки для прайс-листа: цены,скидки, остатки , ценники"  >
+        <cenaOpt>1</cenaOpt> <!-- 0 только розничные цены -->  
+        <min_sum_opt>1000</min_sum_opt><!-- пока данный параметр берем из базы сумма от которой перескакиваем на опт работает только если cenaOpt=1 -->
+        <skidkaOtSum>0</skidkaOtSum> <!-- в зависимости от суммы меняем скидку --> 
+        <skidkaOtDo1 ot='0' do = '100' >0</skidkaOtDo1> <!-- работает только тогда когда 
+                                                         skidkaOtSum = 1 а cenaOpt=0  --> 
+         <skidkaOtDo2 ot='100' do = '200' >5</skidkaOtDo2>  <!--в процентах-->   
+         <skidkaOtDo3 ot='200' do = '300' >10</skidkaOtDo3>                                                 
+         <skidkaOtDo4 ot='300' do = '999999999999' >15</skidkaOtDo4> <!--  -->     
+    </priceList>
+     
+      
+    
+<!-- далее устаревшее -->
+    
+
+    <Cennik info="Наcтройка печати ценников">
+        <Name info="Название магазина на ценнике" >Магазин "HozGrand"</Name>
+        <tip  info="либо опт либо розница (маленькими русскими)" >опт</tip>
+    </Cennik>
+    <Print1    info="Принтер1  если ip то это ip адрес фтп куда бросаем файлы *.fods для печати "   >
+        <ip    info="ip или local или пусто если нету принтера">local</ip>
+        <model info="LaserJet или TP-61 или TSC">LaserJet</model>
+        <docs    info="список документов ч/з , которые на него печатаем ">local</docs>
+    </Print1>
+    <Print2 info="Принтер2"  >
+        <ip    info="ip или local или пусто если нету принтера"></ip>
+        <model info="LaserJet или TP-61 или TSC"></model>
+        <docs    info="список документов ч/з , которые на него печатаем "></docs>        
+    </Print2>
+    <Print3 info="Принтер3"  >
+        <ip    info="ip или local или пусто если нету принтера"></ip>
+        <model info="LaserJet или TP-61 или TSC"></model>
+        <docs    info="список документов ч/з , которые на него печатаем "></docs>        
+    </Print3>
+    <Consts info="Это для будущего проекта"  >
+        <KodSklad>to1</KodSklad>
+        <catalogFTP>/ht</catalogFTP>
+        <serverFTP>piruet.cc.ua</serverFTP>
+        <portFTP>ftp</portFTP>
+        <lFTP>w_piruet-cc-ua_fa3b818d</lFTP>
+        <pFTP>a454f637</pFTP>
+        <PorogOpt>0</PorogOpt>
+    </Consts>
+    
+</Data>

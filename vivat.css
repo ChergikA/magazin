@@ -1,0 +1,375 @@
+/*
+    Document   : vivat
+    Created on : 29.09.2012, 9:45:56
+    Author     : san
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root {
+    display: block;
+}
+
+
+body {
+
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial,Tahoma,Verdana,sans-serif; /* 'Times New Roman', Times, serif;  Tahoma;   sans-serif   Arial, Helvetica, sans-serif;*/
+	font-size: 14px;
+
+}
+
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+   	font-family:'Times New Roman', Times, serif;  /* Ўрифт с засечками  Tahoma;*/
+    /* font-style: italic;   урсивное начертание */
+	font-weight: bold;  /* normal;  */
+	color: #F93D00;
+
+}
+
+h1 {
+	font-size: 2em;
+
+}
+
+h2 {
+	font-size: 1.6em;
+
+}
+
+h3 {
+	font-size: 1.4em;
+	font-weight: bold;
+
+    /*text-align: right;*/
+}
+
+h4 {
+	margin: 5px;
+	padding: 0;
+   	font-family: 'Times New Roman', Times, serif; /* Ўрифт с засечками */
+    /* font-style: italic;   урсивное начертание */
+	font-weight: bold;  /* normal;  */
+        text-align: left;
+
+}
+
+p, ul, ol {
+	margin-top: 0;
+	line-height: 180%;
+}
+
+ul, ol {
+}
+
+a {
+	text-decoration: none;
+        /*border-bottom: 1px dotted #febb05;*/
+	color: #000000;
+}
+
+a:hover {
+    color: #d01855;
+}
+
+/*
+a:visited{
+    color: darkblue;
+}
+*/
+
+/* Sidebar  правое меню
+*/
+
+#sidebar {
+	float: left;
+        padding: 40px 0 0 10px;
+
+}
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	margin: 0;
+	padding: 0;
+}
+
+#sidebar li ul {
+	padding-bottom: 30px;
+}
+
+#sidebar li li {
+	margin-left: 3px;
+	margin-right: 15px;
+	line-height: 35px;
+	border-bottom: 1px dashed #D2D4C9;
+}
+
+#sidebar li li span {
+	display: block;
+	margin-top: -20px;
+	padding: 0;
+	font-size: 12px;
+	font-style: italic;
+}
+
+#sidebar h2 {
+	height: 32px;
+        width: 180px;
+	padding: 3px 0 0 24px;
+	background: url(images/img03.jpg) no-repeat left top;
+	font-size: 14px;
+	color: #000000;
+}
+
+#sidebar p {
+	margin: 0 15px;
+	padding: 20px 0px;
+	text-align: justify;
+}
+
+#sidebar a {
+	color: #000000;
+	border: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
+}
+
+
+
+
+/*горизонтальное доп меню*/
+#menu{
+
+       margin: -14px 0px 0px 0px ;
+        /* width:500px;*/
+}
+#menu ul{
+        list-style:none;
+}
+#menu li{
+        list-style:none;
+        display:block;
+        float:left;
+        background:#f4f4ec;  /* белый */
+        border-bottom:1px solid #d01855; /*цвет виват*/
+}
+#menu li a{
+        display:block;
+        float:left;
+        /*color:#44494f; темно серый*/
+        text-transform:uppercase;
+        font-size:11px;
+        /*font-weight:bold;*/
+        line-height:18px; /*высота кнопки*/
+        border:solid #e1e1d3; /*светло серый*/
+        border-width:1px 1px 0 1px;
+        text-decoration:none;
+        padding:0 15px; /*отступ букв справа слева */
+}
+        #menu li a:hover{
+                color:#90342d; /*цвет виват*/
+        }
+#menu li a.current{
+        display:block;
+        float:left;
+
+        color:#44494f;
+        text-transform:uppercase;
+        font-size:11px;
+        font-weight:bold;
+        line-height:25px;
+        border:solid #e1e1d3; /*светло серый*/
+        border-width:1px 1px 0 0;
+        text-decoration:none;
+        padding:0 15px;
+}
+        #menu li a:hover.current{
+                color:#90342d; /*цвет виват*/
+        }
+
+/*низспадающее меню на JQuery*/
+.menu_head{
+    /*border:1px solid #998675;*/
+     /*position: absolute;*/ 
+/*     top: 20px; 
+    left: 0; 
+    width: 200px; Ўирина левого фрейма
+    height: 100%;
+    overflow: hidden; */
+background: #AA0000;
+}
+
+.menu_body {
+    display:none ; 
+    width:210px;
+    /*height: 160px;*/
+    border-right:2px solid blue ;
+    border-bottom:2px solid blue;
+    border-left:2px solid blue;
+    font-family: Times, sans-serif;
+           border-radius: 3px; 
+       -webkit-border-radius: 3px; 
+       -moz-border-radius: 3px; 
+   background: #F0F0F0 ;
+   float:left ;
+   
+    
+}
+.menu_body li{
+    background:#febb05 ;
+    /*height: 22px;*/
+}
+.menu_body li.alt{
+    background:activecaption ;
+    /*height: 22px;*/
+}
+.menu_body li a{color:#00f ; text-decoration:none; padding:10px; display:block;}
+.menu_body li a:hover{padding:15px 10px; font-weight:bold;}
+
+
+
+/*стиль дл€ таблицы*/
+
+/* Design 7 */
+table.Design7 {
+    border-spacing: 0px;
+    border-collapse: collapse;
+    background: #F9F5D7;
+    border: 0.3em solid #000000;
+}
+table.Design7 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.1em 0.5em;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+}
+table.Design7 td {
+    text-align: left;
+    border: 0px;
+    border-bottom: 1px solid #000000;
+    padding: 0.1em 0.5em;
+}
+table.Design7 thead th {
+    text-align: center;
+    font-weight: bold;
+    background-color: #AA0000;
+    color: #FFFFFF;
+}
+table.Design7 th.Corner {
+    text-align: left;
+}
+table.Design7 td.Odd {
+    background: #E8E4C0;
+}
+
+
+/* Design 5 */
+
+table.Design5 {
+    table-layout: fixed; /*фиксированна€ ширина €чеек*/
+    width: 100% ;
+    border-spacing: 1px;
+    border-collapse: collapse;
+    border-top: 2px solid #BD332B; /*жирна€ лини€ табл*/
+    border-bottom: 1px solid #febb05;
+}
+table.Design5 th {
+    text-align: left;
+    font-weight: normal;
+    padding: 0.2em 0.5em;
+    border-top: 1px dotted #febb05;
+}
+table.Design5 td {
+    text-align: right;
+    border-top: 1px dotted #febb05;
+    padding: 0.2em 0.5em;
+}
+table.Design5 thead th {
+    text-align: center;
+    border-bottom: 1px solid #BD332B;
+
+}
+table.Design5 th.Corner {
+    text-align: left;
+
+}
+table.Design5 td.Odd {
+    background: rgb(249, 249, 249);
+}
+table.Design5 th.Odd {
+    background: #f1f8fe;
+}
+table.Design5 th.Odd_lft { /* присутствует лева€ граница */
+    background: #f1f8fe;
+    border-left: 1px dotted  #febb05;
+}
+table.Design5 th.lft { /* присутствует лева€ граница */
+    border-left: 1px dotted  #febb05;
+}
+table.Design5 th.Odd_notop { /* отсутствует верхн€€ граница */
+    background: #f1f8fe;
+    border-top: 0px dotted #febb05;
+}
+table.Design5 th.notop { /* отсутствует верхн€€ граница */
+    border-top: 0px dotted #febb05;
+}
+table.Design5 th.Odd_lft_notop { /* лева€ без верхней границы */
+    background: #f1f8fe;
+    border-left: 1px dotted  #febb05;
+    border-top: 0px dotted #febb05;
+}
+table.Design5 th.lft_notop { /* лева€ без верхней границы */
+    border-left: 1px dotted  #febb05;
+    border-top: 0px dotted #febb05;
+}
+
+
+
+/* всплывающее окно дл€ редактировани€ данных в таблице
+
+*/
+ .bar {
+    position: absolute;
+    border: 1px solid;
+    border-color: #febb05;
+    padding: 5px;
+   /* left: 10px;
+    top: 10px; */
+    width: 140px;
+    height: 50px;
+    visibility: hidden ;
+    background-color: #F0F0F0 }
+
+/* Footer  #E8E4C0 */
+#footer {
+	width: 100%;
+	background: #2C2C2C;
+	height: 50px;
+	margin: 0 auto;
+	padding: 0px 0 15px 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 20px;
+	line-height: normal;
+	font-size: 9px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#footer a {
+	color: #969696;
+}

@@ -1,0 +1,11 @@
+
+body{background:#534741;font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+ul, li{margin:0; padding:0; list-style:none;}
+
+.menu_head{border:1px solid #998675;}
+
+.menu_body {display:none; width:184px;border-right:1px solid #998675;border-bottom:1px solid #998675;border-left:1px solid #998675;}
+.menu_body li{background:#493e3b;}
+.menu_body li.alt{background:#362f2d;}
+.menu_body li a{color:#FFFFFF; text-decoration:none; padding:10px; display:block;}
+.menu_body li a:hover{padding:15px 10px; font-weight:bold;}

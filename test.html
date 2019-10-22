@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<title>Пример сайта с фреймами</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<!-- <meta http-equiv="pragma" content= "no-cache"> -->
+
+</head>
+    <style>
+    .bar { position: absolute;
+    border: 1px solid;
+    padding: 5px;
+    left: 0px;
+    width: 300px;
+    height: 50px;
+    visibility: hidden ;
+    background-color: #F0F0F0 }
+
+    </style>
+
+<script type="text/javascript">
+
+function show_bar(event) {
+
+var MouseX = event.clientX + document.body.scrollLeft;
+var MouseY = event.clientY + document.body.scrollTop;
+var obj = document.getElementById("win");
+
+obj.style.top = MouseY + 10;
+obj.style.left = MouseX;
+obj.style.visibility = "visible";
+
+}
+
+function hide_bar() {
+
+document.getElementById("win").style.visibility="hidden"
+
+}
+
+</script>
+<body>
+При нажатии на <span style='cursor: pointer; color: #FF0000' onclick='show_bar(event)'>слова</span><br>
+, выделенные другим цветом под ними будет
+<span style='cursor: pointer; color: #FF0000' onclick='show_bar(event)'>открываться</span> всплывающее окно.
+
+<div id=win class=bar>
+<div align=right>
+<span style='cursor: pointer' title='Закрыть' onclick='hide_bar()'>x</span>
+</div>
+Тестовое окно.<br>
+В нем можно разместить не только текст,<br> но и элементы формы, изображения.
+</div>
+</body>
+</html>

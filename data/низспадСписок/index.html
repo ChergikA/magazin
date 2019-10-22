@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Анимированное выпадающее меню на jQuery</title>
+
+<style type="text/css">
+body{background:#534741;font-family:Arial, Helvetica, sans-serif; font-size:12px;
+}
+ul, li{margin:0; padding:0; list-style:none;
+}
+.menu_head{border:1px solid #998675;
+}
+.menu_body {display:none; width:184px;border-right:1px solid #998675;border-bottom:1px solid #998675;border-left:1px solid #998675;
+}
+.menu_body li{background:#493e3b;
+}
+.menu_body li.alt{background:#362f2d;
+}
+.menu_body li a{color:#FFFFFF; text-decoration:none; padding:10px; display:block;
+}
+.menu_body li a:hover{padding:15px 10px; font-weight:bold;
+}	
+	</style>
+    
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+	$("ul.menu_body li:even").addClass("alt");
+    $('img.menu_head').click(function () {
+	$('ul.menu_body').slideToggle('medium');
+    });
+	$('ul.menu_body li a').mouseover(function () {
+	$(this).animate({ fontSize: "14px", paddingLeft: "20px" }, 50 );
+    });
+	$('ul.menu_body li a').mouseout(function () {
+	$(this).animate({ fontSize: "12px", paddingLeft: "10px" }, 50 );
+    });
+});
+</script>
+
+</head>
+
+<body>
+<div class="container">
+<img src="navigate.png" width="184" height="32" class="menu_head" />
+<ul class="menu_body">
+<li><a href="http://ruseller.com/index.php">Главная</a></li>
+<li><a href="http://evgeniypopov.com/index.php">Блог</a></li>
+<li><a href="http://evgeniypopov.ru/index.php">Форум поддержки</a></li>
+<li><a href="http://ruseller.com/about.php">Контакты/О нас</a></li>
+</ul>
+</div>
+</body>
+</html>
