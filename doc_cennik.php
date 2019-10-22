@@ -6,6 +6,7 @@ global $db;
 $id_doc = 'list';
 
 
+// меняем и сохраняем
 
 if ( isset($_GET['iddoc']) ) {
     $id_doc = $_GET['iddoc'];
